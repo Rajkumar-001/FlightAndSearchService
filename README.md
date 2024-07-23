@@ -1,15 +1,19 @@
 /
     -src
-        server
-        models
-        controllers
-        middlewares
-        services
+        server/index.js
+        models/
+        controllers/  
+        middlewares/
+        services/
+        utils/
+        config/
+        repository/
 
-        
+
+        -tests/[later]/
+        -static/
+        -temp/
 
 
-
-    -tests/[later]
 
 
