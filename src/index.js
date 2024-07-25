@@ -8,7 +8,10 @@ const bodyParser=require('body-parser');
 
 const {PORT}=require('./config/serverConfig');
 
-const CityRepository=require('./repository/city-repo');
+
+const ApiRoutes=require('./routes/index');
+
+
 
 
 
@@ -20,15 +23,12 @@ const setUpServer=async()=>{
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
 
-    // const repo = new CityRepository();
 
-    // try {
-    //     await repo.createCity({ name: "New Delhi" });
+    
+    app.use('/api',ApiRoutes);
+   
 
-    //     console.log('City created successfully');
-    // } catch (error) {
-    //     console.error('Error creating city:', error);
-    // }
+   
 
 
     app.listen(PORT,async ()=>{
